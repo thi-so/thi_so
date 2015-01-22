@@ -1,0 +1,317 @@
+/* ----------------------------------------
+== Css - So & Thi 2015 - Projet responsive
+------------------------------------------- */
+
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font: 1.4em/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #ccc;
+    background: #fff;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+video,
+img,
+object {
+    height: auto;
+    max-width: 100%;
+}
+
+object,
+embed {
+    height: 100%;
+}
+
+::-webkit-input-placeholder {
+   text-transform: uppercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-transform: uppercase;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-transform: uppercase;
+}
+
+:-ms-input-placeholder {
+   text-transform: uppercase;
+}
+
+
+
+/* ----------------------------------------
+== HEADER
+------------------------------------------- */
+
+[role=banner] {
+    padding: 20px 0;
+    background: #eb9532;
+    height: 83px;
+}
+
+[role=banner] .wrapper { position: relative; }
+
+[role=banner] .wrapper > [rel=home] {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+}
+
+[role=banner] .wrapper > [rel=home]:hover,
+[role=banner] .wrapper > [rel=home]:focus {
+    opacity: .5;
+}
+
+[role=navigation] {
+    padding-left: 176px;
+    text-align: right;
+}
+
+[role=navigation] a {
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+}
+
+[role=navigation] a:hover{
+    color: #000;
+}
+
+[role=navigation] .is-active {
+    color: #c73538;
+}
+
+[role=navigation] .is-active:hover{
+    color: #fff;
+}
+
+[role=main] header {
+    background: #eb9532;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+
+[role=main] header p {
+    font-size: 1.429em;
+    margin: 20px 0 40px;
+    color: #d2d2d2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+
+[role=main] h2 {
+    margin: 0 0 .25em 0;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #111;
+}
+
+[role=main] p {
+    font-size: 1.125em;
+}
+
+
+#banner {
+    visibility: hidden;
+}
+
+
+.btn-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 37px 4px;
+    width: 50px;
+    height: 80px;
+}
+
+.btn-nav .inner:after,
+.btn-nav .inner:before,
+.btn-nav .inner {
+    background: #fff;
+    height: 6px;
+    border-radius: 4px;
+}
+
+.btn-nav .inner:after,
+.btn-nav .inner:before {
+    position: relative;
+    content: '';
+    display: block;
+}
+
+.btn-nav .inner:after { top: 8px; }
+.btn-nav .inner:before { top: -14px; }
+
+
+.wrapper {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.list-inline {
+    padding-left: 0;
+    font-size: 1px;
+    letter-spacing: -1px;
+    list-style: none;
+}
+
+.list-inline > li {
+    display: inline-block;
+    font-size: 18em;
+    letter-spacing: normal;
+    vertical-align: middle;
+}
+.list-inline > li + li {
+    margin-left: 5px;
+}
+
+.lt-ie8 .list-inline > li {
+    display: inline;
+    zoom: 1;
+}
+
+.list-inline > li a {
+    display: block;
+}
+
+
+/* ----------------------------------------
+== SLIDER
+------------------------------------------- */
+#slider{
+	max-width:960px;
+	margin:0px auto; 
+}
+
+/* ----------------------------------------
+== PAR PAYS
+------------------------------------------- */
+
+#par-pays{
+	max-width: 960px;
+	margin: 0px auto;
+
+}
+
+
+[role=main] h2{
+	padding-left: 25px;
+
+	color:#eb9532;
+	font-size: 2em;
+	font-family: Arial, sans-serif;
+}
+
+
+[role=main] img{
+	padding:15px;
+}
+
+
+/* ----------------------------------------
+== NEWSLETTER
+------------------------------------------- */
+
+[role=newsletter] button{
+	width: 368px;
+	height: 50px;
+	background:#0f7c2b;
+}
+
+/* ----------------------------------------
+== FOOTER
+------------------------------------------- */
+
+[role=footer] {
+    background: #212121;
+    height: 50px;
+}
+
+[role=footer] .disp-tc { vertical-align: middle; }
+
+[role=footer] small {
+    margin: 0;
+    text-transform: uppercase;
+    color: #454545;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.125em;
+}
+
+[role=footer] .list-inline { text-align: right; }
+
+/* ----------------------------------------
+== Media queries
+------------------------------------------- */
+
+@media only screen and (max-width:640px) {
+    .disp-t, .disp-tr, .disp-tc { display: block; }
+    [role=footer],
+    [role=footer] .list-inline {
+        text-align: center;
+    }
+    [role=footer] .list-inline { margin-top: 42px; }
+    [role="main"] .disp-tc { border-bottom: none; }
+    [role="main"] .disp-tc:nth-child(2n+1) {
+        border-right: none;
+    }
+    #newsletter h1 { font-size: 1.75em; }
+    [role=footer] .list-inline li+ li {
+        margin-left: 40px;
+    }
+    #newsletter form { padding: 0 20px; }
+    #newsletter [type="submit"] { right: 20px; }
+    [role=banner] { text-align: center; }
+    [role=banner] .wrapper > [rel=home] {
+        display: inline-block;
+        position: inherit;
+        margin-top: 0;
+    }
+    [role=navigation] {
+        padding-left: 0;
+        text-align: center;
+    }
+    [role=navigation] li { display: block; }
+    role=navigation] li + li  { margin-left: 0; }
+    [role=main] h1:before, [role=main] h1:after { display: none; }
+    [role=main] h1 { font-size: 2em; }
+    #newsletter [type="submit"] {
+        display: block;
+        right: 0;
+        border-left: none;
+        position: inherit;
+        width: 100%;
+        margin: 20px auto;
+    }
+    #newsletter [type="email"] { padding: 0 20px; }
+    .btn-nav, #to-top { display: block; }
+    [role=navigation] { display: none; }
+}
